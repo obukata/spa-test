@@ -1,0 +1,72 @@
+// Project Settings
+@import "util/baseset";
+
+//* ==================================================
+//	FontSet
+//================================================== */
+@mixin fontset_html_ja {
+  font-size: 62.5%; // = 10px = 1rem
+	font-family: $fontSansJa;
+  line-height: 1.6;
+}
+
+@mixin fontset_body_ja {
+	font-size: 14px;
+	font-size: 1.4em; // = 14px
+	// if you use 'rem' bug occurred in chrome
+}
+
+@mixin fontset_html_en {
+  font-size: 62.5%; // = 10px = 1rem
+	font-family: $fontSansEn;
+  line-height: 1.6;
+}
+
+@mixin fontset_body_en {
+	font-size: 14px;
+	font-size: 1.4em; // = 12px
+	// if you use 'rem' bug occurred in chrome
+}
+
+
+//* ==================================================
+//	Contents Width
+//================================================== */
+$InnerMinWidth_op: 1239px;
+$InnerMinWidth: 999px;
+$InnerMaxWidth_tb: 768px;
+$InnerMaxWidth_sp: 414px;
+$InnerMinWidth_sp: 320px;
+
+
+//* ==================================================
+//	Color Scheme
+//================================================== */
+$white: #e8f8ff;
+$white-opacity-8: rgba(232, 248, 255, .8);
+$white-opacity-6: rgba(232, 248, 255, .6);
+$white-opacity-4: rgba(232, 248, 255, .4);
+$white-opacity-2: rgba(232, 248, 255, .2);
+
+$black: #2a2c2b;
+
+$green: #90A886;
+$green-opacity-8: rgba(144, 168, 134, .8);
+$green-opacity-6: rgba(144, 168, 134, .6);
+$green-opacity-4: rgba(144, 168, 134, .4);
+$green-opacity-2: rgba(144, 168, 134, .2);
+
+$yellow: #FEF5CD;
+
+$blue: #171B33;
+
+$gray: #393948;
+
+
+//* ==================================================
+//	trantion
+//================================================== */
+$fast: 200ms;
+$middle: 400ms;
+$slow: 1000ms;
+$superslow: 2000ms;
