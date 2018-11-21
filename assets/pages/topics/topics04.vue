@@ -2,7 +2,7 @@
 	<div class="main-body">
 		<div class="visual">
 			<div class="visual-body">
-				<img src="/assets/images/common/img_card04.jpg" alt="">
+				<img src="./assets/images/common/img_card04.jpg" alt="">
 			</div>
 		</div>
 		<article class="article">
@@ -26,8 +26,8 @@
 			</section>
 			<section class="section pagenation-section">
 				<div class="pagenation-body style--column style--font-en style--font-black">
-					<div class="pagenation-prev"><router-link to="/topics03"><</router-link></div>
-					<div class="pagenation-next"><router-link to="/topics05">></router-link></div>
+					<div class="pagenation-prev"><router-link to="./topics03"><</router-link></div>
+					<div class="pagenation-next"><router-link to="./topics05">></router-link></div>
 				</div>
 			</section>
 		</article>
