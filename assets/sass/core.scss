@@ -81,6 +81,7 @@ html[lang="en"] {
 	overflow-y: scroll;
 	z-index: 10;
 	background: $white;
+	transition: all 300ms ease;
 	.header-body {
 		padding: 30px;
 	}
@@ -127,6 +128,13 @@ html[lang="en"] {
 	}
 }
 
+@media (max-width: $InnerMaxWidth_tb) {
+	.header {
+		transform: translateX(-250px);
+	}
+}
+
+
 //* main
 //*------------------------------------------------------------------------------*/
 
@@ -136,6 +144,7 @@ html[lang="en"] {
 	padding: 30px;
 	box-sizing: border-box;
 	float: right;
+	transition: all 300ms ease;
 	.main-title {
 		font-size: 4.0rem;
 		text-align: center;
@@ -157,13 +166,22 @@ html[lang="en"] {
 	}
 }
 
+@media (max-width: $InnerMaxWidth_tb) {
+	.main {
+		width: 100%;
+	}
+}
+
+
 //* panel-section
 //*------------------------------------------------------------------------------*/
 
 .panel-section {
 	.panel-card {
+		columns: 3;
+	}
+	.panel-card-item {
 		width: 100%;
-		background: $gray;
 		margin-bottom: 20px;
 		a {
 			position: relative;
@@ -180,6 +198,7 @@ html[lang="en"] {
 				background: rgba(255, 255, 255, 0.7);
 			}
 			&:hover {
+				transform: scale(0.96);
 				&::before {
 					top: 10px;
 					left: 10px;
@@ -193,6 +212,75 @@ html[lang="en"] {
 			width: 100%;
 			height: auto;
 		}
+	}
+}
+
+@media (max-width: $InnerMaxWidth_tb) {
+	.panel-section {
+		.panel-card {
+			columns: 2;
+		}
+	}
+}
+@media (max-width: $InnerMaxWidth_sp) {
+	.panel-section {
+		.panel-card {
+			columns: 1;
+		}
+	}
+}
+
+
+//* visual
+//*------------------------------------------------------------------------------*/
+
+.visual {
+	.visual-body {
+		position: relative;
+		width: 100%;
+		height: 0;
+		padding-top: 40%;
+		overflow: hidden;
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			margin: auto;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+//* topics-section
+//*------------------------------------------------------------------------------*/
+
+.topics-section {
+	.topic-header {
+		justify-content: space-between;
+	}
+}
+
+
+//* topics-section
+//*------------------------------------------------------------------------------*/
+
+.pagenation-section {
+	.pagenation-body {
+		justify-content: space-between;
+	}
+	.pagenation-prev a,
+	.pagenation-next a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		line-height: 1;
+		background: $black;
+		color: $white;
 	}
 }
 
@@ -232,9 +320,7 @@ html[lang="en"] {
 .style--font-black {
 	font-weight: 900;
 }
-.style--card-column {
-	columns: 3;
-}
+
 
 //* ==================================================
 //	hover Effects
