@@ -2,7 +2,7 @@
 	<div class="main-body">
 		<div class="visual">
 			<div class="visual-body">
-				<img src="./assets/images/common/img_card02.jpg" alt="">
+				<img src="assets/images/common/img_card02.jpg" alt="">
 			</div>
 		</div>
 		<article class="article">
