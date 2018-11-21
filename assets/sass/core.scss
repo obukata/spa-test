@@ -326,12 +326,22 @@ html[lang="en"] {
 //	hover Effects
 //================================================== */
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
+.fade-enter-active {
+	transition: all 1000ms 1000ms;
 }
-.fade-enter, .fade-leave-to {
-  opacity: 0;
+.fade-enter {
+	transform: scale(1.05);
+	opacity: 0;
 }
+.fade-enter-to {
+}
+.fade-leave-active {
+	transition: all 1000ms;
+}
+.fade-leave-to {
+	opacity: 0;
+}
+
 
 //* ==================================================
 //	age include
