@@ -18,16 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
 	Vue.use(VueRouter)
 
 	const routes = [
-		{ path: '/', component: indexPage },
-		{ path: '/about', component: aboutPage },
-		{ path: '/contact', component: contactPage },
-		{ path: '/topics01', component: topics01Page },
-		{ path: '/topics02', component: topics02Page },
-		{ path: '/topics03', component: topics03Page },
-		{ path: '/topics04', component: topics04Page },
-		{ path: '/topics05', component: topics05Page },
-		{ path: '/topics06', component: topics06Page },
-		{ path: '/topics07', component: topics07Page },
+		{ path: './', component: indexPage },
+		{ path: './about', component: aboutPage },
+		{ path: './contact', component: contactPage },
+		{ path: './topics01', component: topics01Page },
+		{ path: './topics02', component: topics02Page },
+		{ path: './topics03', component: topics03Page },
+		{ path: './topics04', component: topics04Page },
+		{ path: './topics05', component: topics05Page },
+		{ path: './topics06', component: topics06Page },
+		{ path: './topics07', component: topics07Page },
 	]
 
 	const router = new VueRouter({
