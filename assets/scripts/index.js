@@ -13,30 +13,56 @@ import topics05Page from '../pages/topics/topics05.vue'
 import topics06Page from '../pages/topics/topics06.vue'
 import topics07Page from '../pages/topics/topics07.vue'
 
+
 document.addEventListener('DOMContentLoaded', () => {
-	// VueRouterを使用
-	Vue.use(VueRouter)
-
-	const routes = [
-		{ path: '/', component: indexPage },
-		{ path: '/about', component: aboutPage },
-		{ path: '/contact', component: contactPage },
-		{ path: '/topics01', component: topics01Page },
-		{ path: '/topics02', component: topics02Page },
-		{ path: '/topics03', component: topics03Page },
-		{ path: '/topics04', component: topics04Page },
-		{ path: '/topics05', component: topics05Page },
-		{ path: '/topics06', component: topics06Page },
-		{ path: '/topics07', component: topics07Page },
-	]
-
-	const router = new VueRouter({
-		mode: 'history',
-		routes,
-	})
-
-	const app = new Vue({
-		el: '#app',
-		router,
-	})
+	obkt.vue()
 })
+
+
+const obkt = {
+	vue: () => {
+		// VueRouterを使用
+		Vue.use(VueRouter)
+
+		const routes = [
+			{ path: '/', component: indexPage },
+			{ path: '/about', component: aboutPage },
+			{ path: '/contact', component: contactPage },
+			{ path: '/topics01', component: topics01Page },
+			{ path: '/topics02', component: topics02Page },
+			{ path: '/topics03', component: topics03Page },
+			{ path: '/topics04', component: topics04Page },
+			{ path: '/topics05', component: topics05Page },
+			{ path: '/topics06', component: topics06Page },
+			{ path: '/topics07', component: topics07Page },
+		]
+
+		const router = new VueRouter({
+			mode: 'history',
+			routes,
+		})
+
+		const app = new Vue({
+			el: '#app',
+			router,
+			data: {
+				spnav: {
+					status: true,
+					class: 'is--close'
+				}
+			},
+			methods: {
+				navigation: function() {
+					this.spnav.status = !this.spnav.status
+					if(this.spnav.status) {
+						this.spnav.class = 'is--open'
+					}else {
+						this.spnav.class = 'is--close'
+					}
+				}
+			}
+		})
+	},
+
+
+}
